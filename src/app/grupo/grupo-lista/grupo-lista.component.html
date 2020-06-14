@@ -1,0 +1,8 @@
+<mat-nav-list>
+  <mat-list-item *ngFor="let grupo of grupo | async">
+    <a matLine>{{grupo.id}} - {{ grupo.nome}}</a>
+
+    <mat-icon>chevron_right</mat-icon>
+
+  </mat-list-item>
+</mat-nav-list>

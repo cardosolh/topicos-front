@@ -1,0 +1,8 @@
+<mat-nav-list>
+  <mat-list-item *ngFor="let pessoa of pessoa | async">
+    <a matLine>{{pessoa.id}} - {{ pessoa.nome}}</a>
+
+    <mat-icon>chevron_right</mat-icon>
+
+  </mat-list-item>
+</mat-nav-list>
