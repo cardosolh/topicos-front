@@ -1,5 +1,5 @@
 import { Observable } from 'rxjs';
-import { AnotacaoService } from './../anotacao.service';
+import { AnotacaoService } from '../anotacao.service';
 import { Component, OnInit } from '@angular/core';
 import { Anotacao } from '../anotacao.interface';
 @Component({

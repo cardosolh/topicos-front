@@ -1,5 +1,5 @@
 import { Observable } from 'rxjs';
-import { GrupoService } from './../grupo.service';
+import { GrupoService } from '../grupo.service';
 import { Component, OnInit } from '@angular/core';
 import { Grupo } from '../grupo.interface';
 @Component({

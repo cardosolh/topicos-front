@@ -1,0 +1,7 @@
+<p>pessoa-formulario works!</p>
+[(ngModel)]="pessoa.nome"
+(ngSubmit)="salvar(pessoa)"
+
+<form #f="ngForm" (ngSubmit)="salvar(pessoa)">
+  <button type="submit">Salvar</button>
+</form>
