@@ -1,8 +1,10 @@
+<button mat-button routerLink="/anotacao/form"> Novo</button>
+
 <mat-nav-list>
   <mat-list-item *ngFor="let anotacao of anotacao | async">
     <a matLine>{{anotacao.id}} - {{ anotacao.obs}}</a>
 
-    <mat-icon>chevron_right</mat-icon>
+    <mat-icon (click)="deletar(anotacao.id)">delete</mat-icon>
 
   </mat-list-item>
 </mat-nav-list>

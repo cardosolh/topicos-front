@@ -1,7 +1,15 @@
-<p>pessoa-formulario works!</p>
-[(ngModel)]="pessoa.nome"
-(ngSubmit)="salvar(pessoa)"
-
 <form #f="ngForm" (ngSubmit)="salvar(pessoa)">
-  <button type="submit">Salvar</button>
+  <div class="example-container">
+    <mat-form-field appearance="fill">
+      <mat-label>Id</mat-label>
+      <input matInput [(ngModel)]="pessoa.id" name="id" id="Id" required [ngModelOptions]="{standalone: true}">
+
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Nome</mat-label>
+      <input matInput [(ngModel)]="pessoa.nome" nome="id" id="Nome" required [ngModelOptions]="{standalone: true}">
+    </mat-form-field>
+  </div>
+  <button type="submit" mat-raised-button>Salvar</button>
 </form>

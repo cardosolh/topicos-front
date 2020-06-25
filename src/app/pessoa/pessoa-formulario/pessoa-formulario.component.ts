@@ -15,27 +15,26 @@ export class PessoaFormularioComponent implements OnInit {
 
   pessoa: Pessoa =
     {
-      id: 0,
+      id: Math.floor(1000 * Math.random()),
       nome: ''
     };
   ngOnInit(): void {
   }
 
   salvar(pessoa): void {
-    if (pessoa.nome.length > 0) {
-      this.service.postPessoa(pessoa).subscribe(
-        data => {
-          this.router.navigate(['/pessoas']);
+    console.log(pessoa.nome);
+    this.service.postPessoa(pessoa).subscribe(
+      data => {
+        this.router.navigate(['/pessoa']);
 
-        },
-        error => { }
-      );
-    }
+      },
+      error => { }
+    );
   }
   deletar(id: number): void {
     this.service.deletePessoa(id).subscribe(
       data => {
-        this.router.navigate(['/pessoas']);
+        this.router.navigate(['/pessoa']);
 
       },
       error => { }

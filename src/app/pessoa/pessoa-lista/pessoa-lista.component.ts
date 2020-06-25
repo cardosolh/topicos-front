@@ -17,4 +17,10 @@ export class PessoaListaComponent implements OnInit {
     this.pessoa = this.pessoaService.getPessoa();
   }
 
+  apagar(id: number) {
+    console.log(this.pessoa);
+    this.pessoaService.deletePessoa(id).subscribe();
+
+  }
+
 }
