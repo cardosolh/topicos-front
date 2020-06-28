@@ -1,3 +1,4 @@
+import { NoticiaModule } from './noticia/noticia.module';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -18,6 +19,10 @@ const routes: Routes = [
   {
     path: 'faq',
     loadChildren: () => import('./faq/faq.module').then(g => g.FaqModule)
+  },
+  {
+    path: 'noticia',
+    loadChildren: () => import('./noticia/noticia.module').then(g => g.NoticiaModule)
   }
 ];
 
