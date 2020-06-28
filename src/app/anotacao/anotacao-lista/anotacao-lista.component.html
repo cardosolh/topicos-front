@@ -17,10 +17,10 @@
         <button mat-raised-button color="primary" type="submit" style="margin-bottom: 10px;"> OK </button>
       </form>
 
-      <div class="container" style="width: 12rem;">
-        <mat-nav-list>
-          <mat-list-item *ngFor="let loja of loja | async">
-            <div class="container" style="width: 12rem;">
+      <div>
+            
+            <div *ngFor="let loja of loja | async"  class="container" style="width: 12rem;">
+
               <mat-card style="background-color: rgb(255, 243, 177);">
                 <!--Colocar o titulo no card-->
                 <mat-card-title style="font-size: 15px;"> {{loja.Id}} - {{ loja.Nome}} </mat-card-title>
@@ -38,8 +38,8 @@
               </mat-card>
             </div>
             <!-- <a matLine>{{loja.Id}} - {{ loja.Nome}}</a> -->
-          </mat-list-item>
-        </mat-nav-list>
+          
+        
       </div>
 
     </mat-card>
