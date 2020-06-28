@@ -1,13 +1,17 @@
-<mat-card> 
+<mat-card style="text-align: center;"> 
 
   <mat-card-title style="font-size: 15px; text-align: center;" > Perguntas e Respostas (FAQ) </mat-card-title>
 
-<mat-nav-list>
-  <mat-list-item *ngFor="let faq of faq | async">
-    <a matLine>{{faq.Id}} - {{ faq.Pergunta}}</a>
-    <a matLine>{{faq.Resposta}}</a>
-    <mat-icon>chevron_right</mat-icon>
-  </mat-list-item>
-</mat-nav-list>
+  <div class="row" *ngFor="let faq of faq | async" >
+    
+    <mat-card style="background-color: bisque;" >
+      <!--Colocar o titulo no card-->
+      <mat-card-title style="font-size: 15px;"> <a matLine>{{faq.Id}} - {{ faq.Pergunta}}</a> </mat-card-title>
+
+      <!--Legenda do cartão-->
+      <mat-card-subtitle> <a matLine>{{faq.Resposta}}</a> </mat-card-subtitle>
+    </mat-card>
+
+  </div>
 
 </mat-card> 
