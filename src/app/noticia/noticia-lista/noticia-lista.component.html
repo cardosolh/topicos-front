@@ -33,9 +33,11 @@
           <!--<li *ngFor="let o of RssData?.rss.channel[0].item"><a href="{{o.link[0]}}">{{o.title[0]}}</a></li>-->
           
           <mat-card class="row" *ngFor="let o of RssData?.rss.channel[0].item" style="background-color: bisque;">
-            
+          
+          <div class="row">
           <!--Imagem do cartão. Estende a imagem para a largura do contêiner-->
           <img mat-card-image src="https://thumbs.dreamstime.com/b/uomo-d-affari-che-legge-un-giornale-70947885.jpg">
+          </div>
 
               <a href="{{o.link[0]}}">{{o.title[0]}}</a>
 
