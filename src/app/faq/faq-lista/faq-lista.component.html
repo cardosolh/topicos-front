@@ -1,0 +1,7 @@
+<mat-nav-list>
+  <mat-list-item *ngFor="let faq of faq | async">
+    <a matLine>{{faq.Id}} - {{ faq.Pergunta}}</a>
+    <a matLine>{{faq.Resposta}}</a>
+    <mat-icon>chevron_right</mat-icon>
+  </mat-list-item>
+</mat-nav-list>

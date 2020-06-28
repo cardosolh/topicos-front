@@ -1,0 +1,35 @@
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #d6e4ee;
+  //background-image: url("saude.jpg");
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.row img {
+  max-width: 200px;
+  max-height: 200px;
+  width: auto;
+  height: auto;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+.row {
+  margin-top: 3mm;
+  margin-left: 5mm;
+  margin-bottom: 5mm;
+  margin-right: 3mm;
+  display: inline-block;
+}
+
+.example-container {
+  padding-left: 15px;
+}

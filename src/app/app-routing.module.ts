@@ -14,6 +14,10 @@ const routes: Routes = [
   {
     path: 'grupo',
     loadChildren: () => import('./grupo/grupo.module').then(g => g.GrupoModule)
+  },
+  {
+    path: 'faq',
+    loadChildren: () => import('./faq/faq.module').then(g => g.FaqModule)
   }
 ];
 
