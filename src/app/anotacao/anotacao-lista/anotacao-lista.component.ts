@@ -24,4 +24,7 @@ export class AnotacaoListaComponent implements OnInit {
       .subscribe(usuariosInfectados => this.usuariosInfectados = usuariosInfectados);
     console.log(this.usuariosInfectados);
   }
+  getList(value) {
+    return this[value];
+  }
 }

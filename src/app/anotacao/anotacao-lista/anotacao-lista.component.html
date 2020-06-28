@@ -25,11 +25,21 @@
 
             <!--Recipiente para botões na parte inferior do cartão-->
             <mat-card-actions>
-              <button mat-raised-button color="primary" style="margin-bottom: 10px;"> Disponibilidade </button>
+              <a>Possui Testes Covid: {{loja.TesteCovid?'Sim':'Não'}}</a>
+              <br>
+              <a>Suprimentos:</a>
+              <div *ngFor="let suprimento of loja.Suprimentos" class="container">
+                <a>{{suprimento.Nome}} - {{suprimento.Quantidade}} {{suprimento.UnidadeMedida}}</a><br>
+              </div>
+
+              <!-- <button mat-raised-button color="primary" style="margin-bottom: 10px;"> Disponibilidade </button> -->
               <a href={{loja.Direcoes}}> <button mat-raised-button color="primary" style="margin-bottom: 10px;"> Navegar para </button></a>
               <button mat-raised-button color="primary" style="margin-bottom: 10px;" (click)="getUsuariosInfectados(loja.Localizacao.Latitude,loja.Localizacao.Longitude)">Pessoas Infectadas</button>
               <div *ngIf="usuariosInfectados;">Exitem {{usuariosInfectados.PessoasEncontradas}} pessoas infectadas num raio de {{usuariosInfectados.Raio}} metros.</div>
+
             </mat-card-actions>
+
+
 
           </mat-card>
         </div>
