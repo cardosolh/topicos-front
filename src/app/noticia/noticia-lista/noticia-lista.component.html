@@ -6,14 +6,42 @@
   </mat-list-item>
 </mat-nav-list> -->
 
-<button (click)="GetRssFeedData()">
-  Get Rss Data
-</button>
 
-<h2>
-  {{RssData?.rss.channel[0].title[0]}}
-</h2>
-Total Item: {{RssData?.rss.channel[0].item.length}}
-<ul>
-  <li *ngFor="let o of RssData?.rss.channel[0].item"><a href="{{o.link[0]}}">{{o.title[0]}}</a></li>
-</ul>
+<div class="row" style="width: 83rem;">
+  <mat-card>
+    <!--Colocar o titulo no card-->
+    <mat-card-title style="font-size: 15px;"> Ultimas Notícias </mat-card-title>
+
+    <!--Legenda do cartão-->
+    <mat-card-subtitle> Saiba das ultimas notícias sobre o COVID-19 em todo o mundo. </mat-card-subtitle>
+
+    <strong> Quantidade de notíticas: </strong> {{RssData?.rss.channel[0].item.length}}
+    <br><br>
+
+    <button mat-raised-button color="primary" style="margin-bottom: 10px;" (click)="GetRssFeedData()">
+      Notícias
+    </button>
+
+    <h2>
+      {{RssData?.rss.channel[0].title[0]}}
+    </h2>
+    
+    <div>
+      
+        <!--<mat-card style="background-color: bisque;" *ngFor="let o of RssData?.rss.channel[0].item"><a href="{{o.link[0]}}">{{o.title[0]}}</a></mat-card>-->
+          <!--<li *ngFor="let o of RssData?.rss.channel[0].item"><a href="{{o.link[0]}}">{{o.title[0]}}</a></li>-->
+          
+          <mat-card  *ngFor="let o of RssData?.rss.channel[0].item" style="background-color: bisque;">
+            
+              <a href="{{o.link[0]}}">{{o.title[0]}}</a>
+
+          </mat-card>
+
+
+      
+    </div>
+  
+  </mat-card>
+</div>
+
+
