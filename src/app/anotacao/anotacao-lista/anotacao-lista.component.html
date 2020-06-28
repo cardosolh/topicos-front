@@ -10,23 +10,17 @@
       <!--Legenda do cartão-->
       <mat-card-subtitle> Verifique as lojas existentes e os produtos que deseja realizar a compra. </mat-card-subtitle>
 
-      <!-- Campo de Busca -->
-      <form action=" " method="post">
-        <label for="busca" style="font-size: 4mm;"> Buscar: </label>
-        <input class="entrada" type="search" id="busca" name="q">
-        <button mat-raised-button color="primary" type="submit" style="margin-bottom: 10px;"> OK </button>
-      </form>
 
       <div>
 
-        <div *ngFor="let loja of loja | async" class="container" style="width: 12rem;">
+        <div *ngFor="let loja of loja | async" class="container" style="width: 15rem;">
 
           <mat-card style="background-color: rgb(255, 243, 177);">
             <!--Colocar o titulo no card-->
             <mat-card-title style="font-size: 15px;"> {{loja.Id}} - {{ loja.Nome}} </mat-card-title>
 
             <!--Imagem do cartão. Estende a imagem para a largura do contêiner-->
-            <img mat-card-image src="https://manipulae-prod.s3.us-west-2.amazonaws.com/farmacia/01564370000114/8xwI7klsVSaik8cYSwYa7m1ZlU17u9saSPMnWj4L.jpeg">
+            <img mat-card-image src="https://image.freepik.com/vetores-gratis/farmacia-com-enfermeira-no-balcao-personagem-de-desenho-animado-de-farmacia_36082-340.jpg">
 
 
             <!--Recipiente para botões na parte inferior do cartão-->

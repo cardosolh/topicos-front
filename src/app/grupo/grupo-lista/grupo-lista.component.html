@@ -5,16 +5,9 @@
       <mat-card-title style="font-size: 15px;"> Unidade de Saúde </mat-card-title><br>
 
       <!--Legenda do cartão-->
-      <mat-card-subtitle> Verifique a unidade de saúde mais próximo de você. </mat-card-subtitle>
+      <mat-card-subtitle> Verifique as unidades de saude que possuem testes. </mat-card-subtitle>
 
-      <!-- Campo de Busca -->
-      <form action=" " method="post">
-        <label for="busca">Buscar: </label>
-        <input type="search" id="busca" name="q">
-        <button mat-raised-button color="primary" type="submit" style="margin-bottom: 10px;"> OK </button>
-      </form>
-
-      <div *ngFor="let unidadeSaude of unidadeSaude | async" class="container" style="width: 12rem;">
+      <div *ngFor="let unidadeSaude of unidadeSaude | async" class="container" style="width: 15rem;">
 
         <mat-card style="background-color: rgb(255, 243, 177);">
           <!--Colocar o titulo no card-->
