@@ -1,3 +1,7 @@
+<mat-card> 
+
+  <mat-card-title style="font-size: 15px; text-align: center;" > Perguntas e Respostas (FAQ) </mat-card-title>
+
 <mat-nav-list>
   <mat-list-item *ngFor="let faq of faq | async">
     <a matLine>{{faq.Id}} - {{ faq.Pergunta}}</a>
@@ -5,3 +9,5 @@
     <mat-icon>chevron_right</mat-icon>
   </mat-list-item>
 </mat-nav-list>
+
+</mat-card> 
