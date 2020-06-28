@@ -23,6 +23,7 @@ export class GrupoListaComponent implements OnInit {
   getUsuariosInfectados(lat: number, lon: number): void {
     this.grupoService.getUsuariosInfectados(lat, lon, 500, true)
       .subscribe(usuariosInfectados => this.usuariosInfectados = usuariosInfectados);
+    console.log(this.usuariosInfectados);
   }
 
 

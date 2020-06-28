@@ -14,25 +14,25 @@
         <button mat-raised-button color="primary" type="submit" style="margin-bottom: 10px;"> OK </button>
       </form>
 
-          <div *ngFor="let unidadeSaude of unidadeSaude | async" class="container" style="width: 12rem;">
-           
-            <mat-card style="background-color: rgb(255, 243, 177);">
-              <!--Colocar o titulo no card-->
-              <mat-card-title style="font-size: 15px;"> {{unidadeSaude.Id}} - {{ unidadeSaude.Nome}} </mat-card-title>
+      <div *ngFor="let unidadeSaude of unidadeSaude | async" class="container" style="width: 12rem;">
 
-              <!--Imagem do cartão. Estende a imagem para a largura do contêiner-->
-              <img mat-card-image src="https://animamos.com/wp-content/uploads/2017/03/cedaps.jpg">
+        <mat-card style="background-color: rgb(255, 243, 177);">
+          <!--Colocar o titulo no card-->
+          <mat-card-title style="font-size: 15px;"> {{unidadeSaude.Id}} - {{ unidadeSaude.Nome}} </mat-card-title>
 
-              <!--Legenda do cartão-->
-              <mat-card-subtitle> Rua dos bandeirantes, 123, Belo Horizonte - MG. </mat-card-subtitle>
+          <!--Imagem do cartão. Estende a imagem para a largura do contêiner-->
+          <img mat-card-image src="https://animamos.com/wp-content/uploads/2017/03/cedaps.jpg">
 
-              <!--Recipiente para botões na parte inferior do cartão-->
-              <mat-card-actions>
-                <a href="https://www.google.com/maps/place/Hospital+Vera+Cruz/@-19.9238911,-43.9549601,17z/data=!3m1!4b1!4m5!3m4!1s0xa6975d37dccdd5:0x412d88ec57410097!8m2!3d-19.9238962!4d-43.9527714"> <button mat-raised-button color="primary" style="margin-bottom: 10px;"> Navegar para </button></a>
-              </mat-card-actions>
 
-            </mat-card>
-          </div>
+          <!--Recipiente para botões na parte inferior do cartão-->
+          <mat-card-actions>
+            <a href={{unidadeSaude.Direcoes}}> <button mat-raised-button color="primary" style="margin-bottom: 10px;"> Navegar para </button></a>
+            <button mat-raised-button color="primary" style="margin-bottom: 10px;" (click)="getUsuariosInfectados(unidadeSaude.Localizacao.Latitude,unidadeSaude.Localizacao.Longitude)">Pessoas Infectadas</button>
+            <div *ngIf="usuariosInfectados;">Exitem {{usuariosInfectados.PessoasEncontradas}} pessoas infectadas num raio de {{usuariosInfectados.Raio}} metros.</div>
+          </mat-card-actions>
+
+        </mat-card>
+      </div>
     </mat-card>
   </div>
 </div>
