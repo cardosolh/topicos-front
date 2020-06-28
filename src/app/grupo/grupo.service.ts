@@ -24,8 +24,12 @@ export class GrupoService {
     return this.http.post<UnidadeSaude>(`https://painel-covid-api.herokuapp.com/unidades-saude`, unidadeSaude);
   }
 
-  getUnidadesSaudeInfectados(latitude: number, longitude: number, metros: number): Observable<any> {
+  getUnidadesSaudeComTestes(latitude: number, longitude: number, metros: number): Observable<any> {
     return this.http.get(`https://painel-covid-api.herokuapp.com/unidades-saude/teste-covid/latitude/${latitude}/longitude/${longitude}/raio/${metros}`);
+  }
+
+  getUsuariosInfectados(latitude: number, longitude: number, metros: number, soInfectados: boolean): Observable<any> {
+    return this.http.get(`https://painel-covid-api.herokuapp.com/usuarios/${latitude}/${longitude}/raio/${metros}/soinfectados/${soInfectados}`);
   }
 
 

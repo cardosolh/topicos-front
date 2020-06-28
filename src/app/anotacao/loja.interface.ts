@@ -5,6 +5,8 @@ export interface Loja {
     TesteCovid: boolean;
     Suprimentos: Suprimento[];
     Localizacao: Localizacao;
+
+    Direcoes: string;
 }
 
 export interface Localizacao {
@@ -18,4 +20,18 @@ export interface Suprimento {
     Nome: string;
     Quantidade: number;
     UnidadeMedida: string;
+}
+
+export interface LojasComTestes {
+    id: number;
+    Nome: string;
+    Distancia: number;
+    Tipo: number;
+    Localizacao: Localizacao;
+}
+
+export interface UsuariosEncontrados {
+    Localizacao: Localizacao;
+    PessoasEncontradas: number;
+    Raio: number;
 }

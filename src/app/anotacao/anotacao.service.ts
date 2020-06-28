@@ -24,8 +24,12 @@ export class AnotacaoService {
     return this.http.post<Loja>(`https://painel-covid-api.herokuapp.com/lojas`, loja);
   }
 
-  getLojasInfectados(latitude: number, longitude: number, metros: number): Observable<any> {
+  getLojasComTestes(latitude: number, longitude: number, metros: number): Observable<any> {
     return this.http.get(`https://painel-covid-api.herokuapp.com/lojas/teste-covid/latitude/${latitude}/longitude/${longitude}/raio/${metros}`);
+  }
+
+  getUsuariosInfectados(latitude: number, longitude: number, metros: number, soInfectados: boolean): Observable<any> {
+    return this.http.get(`https://painel-covid-api.herokuapp.com/usuarios/${latitude}/${longitude}/raio/${metros}/soinfectados/${soInfectados}`);
   }
 
 }
