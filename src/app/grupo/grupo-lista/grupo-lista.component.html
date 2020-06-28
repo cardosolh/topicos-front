@@ -13,9 +13,9 @@
         <input type="search" id="busca" name="q">
         <button mat-raised-button color="primary" type="submit" style="margin-bottom: 10px;"> OK </button>
       </form>
-      <mat-nav-list>
-        <mat-list-item *ngFor="let unidadeSaude of unidadeSaude | async">
-          <div class="container" style="width: 12rem;">
+
+          <div *ngFor="let unidadeSaude of unidadeSaude | async" class="container" style="width: 12rem;">
+           
             <mat-card style="background-color: rgb(255, 243, 177);">
               <!--Colocar o titulo no card-->
               <mat-card-title style="font-size: 15px;"> {{unidadeSaude.Id}} - {{ unidadeSaude.Nome}} </mat-card-title>
@@ -33,8 +33,6 @@
 
             </mat-card>
           </div>
-        </mat-list-item>
-      </mat-nav-list>
     </mat-card>
   </div>
 </div>
