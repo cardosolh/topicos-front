@@ -9,6 +9,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [PessoaListaComponent, PessoaFormularioComponent],
@@ -20,7 +21,8 @@ import { MatInputModule } from '@angular/material/input';
     MatInputModule,
     FormsModule,
     MatButtonModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatCardModule
   ]
 })
 export class PessoaModule { }

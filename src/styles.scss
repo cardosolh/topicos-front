@@ -1,12 +1,55 @@
 /* You can add global styles to this file, and also import other style files */
 @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
 
+
 html,
 body {
   height: 100%;
 }
 
 body {
+  background-color:#d6e4ee; 
+  //background-image: url("saude.jpg");
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
+.container img {
+  max-width:200px;
+  max-height:200px;
+  width: auto;
+  height: auto;
+  margin-left:1%;
+  margin-right:1%;
+}
+
+.container {
+  text-align: center;
+  margin-top:3mm;
+  margin-left:3mm;
+  margin-bottom:3mm;
+  margin-right:3mm;
+	display: inline-block;
+}
+
+div {
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 4px;
+  background-color: rgb(54, 129, 228);
+  color: white;
+}
+
+hr.new {
+  border: 10px solid rgb(75, 150, 236);
+  border-radius: 5px;
+}
+
+hr.new-new {
+  border: 10px solid rgb(75, 150, 236);
+  border-radius: 5px;
+}
+

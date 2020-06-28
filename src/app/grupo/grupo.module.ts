@@ -4,6 +4,7 @@ import { MatListModule } from '@angular/material/list';
 import { GrupoRoutingModule } from './grupo-routing.module';
 import { GrupoListaComponent } from './grupo-lista/grupo-lista.component';
 import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { MatIconModule } from '@angular/material/icon';
     CommonModule,
     MatListModule,
     MatIconModule,
-    GrupoRoutingModule
+    GrupoRoutingModule,
+    MatCardModule
   ]
 })
 export class GrupoModule { }

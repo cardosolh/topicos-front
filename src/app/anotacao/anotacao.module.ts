@@ -11,6 +11,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [AnotacaoListaComponent, AnotacaoFormularioComponent],
@@ -18,7 +19,8 @@ import { MatInputModule } from '@angular/material/input';
     CommonModule, MatButtonModule, FormsModule, MatFormFieldModule, MatInputModule,
     MatListModule,
     MatIconModule,
-    AnotacaoRoutingModule
+    AnotacaoRoutingModule,
+    MatCardModule
   ]
 })
 export class AnotacaoModule { }

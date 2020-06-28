@@ -1,3 +1,12 @@
+
+<mat-card> 
+  <!--Colocar o titulo no card-->
+  <mat-card-title style="font-size: 15px;"> Lojas de Suplementos Médicos </mat-card-title><br>
+
+  <!--Legenda do cartão-->
+  <mat-card-subtitle> Verifique as lojas existentes e os produtos que deseja realizar a compra. </mat-card-subtitle>
+</mat-card> 
+
 <mat-nav-list>
   <mat-list-item *ngFor="let grupo of grupo | async">
     <a matLine>{{grupo.id}} - {{ grupo.nome}}</a>
