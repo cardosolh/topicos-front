@@ -1,3 +1,4 @@
+import { Usuario } from './../usuario.interface';
 import { Router } from '@angular/router';
 import { PessoaService } from './../pessoa.service';
 import { FormsModule } from '@angular/forms';
@@ -13,17 +14,23 @@ export class PessoaFormularioComponent implements OnInit {
 
   constructor(private service: PessoaService, private router: Router) { }
 
-  pessoa: Pessoa =
+  usuario: Usuario =
     {
-      id: Math.floor(1000 * Math.random()),
-      nome: ''
+      Id: Math.floor(1000 * Math.random()),
+      Nome: '',
+      InfectadoCovid: true,
+      Localizacao: {
+        Latitude: 0,
+        Longitude: 0
+      },
+      Questionario: []
     };
   ngOnInit(): void {
   }
 
-  salvar(pessoa): void {
-    console.log(pessoa.nome);
-    this.service.postPessoa(pessoa).subscribe(
+  salvar(usuario): void {
+    console.log(usuario.nome);
+    this.service.postUsuario(usuario).subscribe(
       data => {
         this.router.navigate(['/pessoa']);
 
@@ -31,14 +38,14 @@ export class PessoaFormularioComponent implements OnInit {
       error => { }
     );
   }
-  deletar(id: number): void {
-    this.service.deletePessoa(id).subscribe(
-      data => {
-        this.router.navigate(['/pessoa']);
+  // deletar(id: number): void {
+  //   this.service.deletePessoa(id).subscribe(
+  //     data => {
+  //       this.router.navigate(['/pessoa']);
 
-      },
-      error => { }
-    );
+  //     },
+  //     error => { }
+  //   );
 
-  }
+  // }
 }

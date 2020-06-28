@@ -25,16 +25,16 @@ export class AnotacaoFormularioComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  salvar(anotacao): void {
-    console.log(anotacao.id);
-    this.service.postAnotacao(anotacao).subscribe(
-      data => {
-        this.router.navigate(['/anotacao']);
+  // salvar(anotacao): void {
+  //   console.log(anotacao.id);
+  //   this.service.postAnotacao(anotacao).subscribe(
+  //     data => {
+  //       this.router.navigate(['/anotacao']);
 
-      },
-      error => { }
-    );
-  }
+  //     },
+  //     error => { }
+  //   );
+  // }
 
 
 }

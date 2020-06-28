@@ -2,122 +2,46 @@
 
 
 <div>
-  <div class="row" style="width: 84,5rem;" >  
-    <mat-card> 
+  <div class="row" style="width: 84,5rem;">
+    <mat-card>
       <!--Colocar o titulo no card-->
       <mat-card-title style="font-size: 15px;"> Lojas de Suplementos Médicos </mat-card-title><br>
 
       <!--Legenda do cartão-->
       <mat-card-subtitle> Verifique as lojas existentes e os produtos que deseja realizar a compra. </mat-card-subtitle>
 
-      <!-- Campo de Busca --> 
+      <!-- Campo de Busca -->
       <form action=" " method="post">
         <label for="busca" style="font-size: 4mm;"> Buscar: </label>
         <input class="entrada" type="search" id="busca" name="q">
         <button mat-raised-button color="primary" type="submit" style="margin-bottom: 10px;"> OK </button>
       </form>
 
-      <div class="container" style="width: 12rem;">  
-        <mat-card style="background-color: rgb(255, 243, 177);"> 
-          <!--Colocar o titulo no card-->
-          <mat-card-title style="font-size: 15px;"> Lojas </mat-card-title>
+      <div class="container" style="width: 12rem;">
+        <mat-nav-list>
+          <mat-list-item *ngFor="let loja of loja | async">
+            <div class="container" style="width: 12rem;">
+              <mat-card style="background-color: rgb(255, 243, 177);">
+                <!--Colocar o titulo no card-->
+                <mat-card-title style="font-size: 15px;"> {{loja.Id}} - {{ loja.Nome}} </mat-card-title>
 
-          <!--Imagem do cartão. Estende a imagem para a largura do contêiner-->
-          <img mat-card-image src="https://manipulae-prod.s3.us-west-2.amazonaws.com/farmacia/01564370000114/8xwI7klsVSaik8cYSwYa7m1ZlU17u9saSPMnWj4L.jpeg">	
-
-    
-          <!--Recipiente para botões na parte inferior do cartão-->
-          <mat-card-actions> 
-            <button mat-raised-button color="primary" style="margin-bottom: 10px;"> Disponibilidade </button> 
-            <button mat-raised-button color="primary" style="margin-bottom: 10px;"> Navegar para </button>  
-          </mat-card-actions>
-
-        </mat-card>
-      </div>
+                <!--Imagem do cartão. Estende a imagem para a largura do contêiner-->
+                <img mat-card-image src="https://manipulae-prod.s3.us-west-2.amazonaws.com/farmacia/01564370000114/8xwI7klsVSaik8cYSwYa7m1ZlU17u9saSPMnWj4L.jpeg">
 
 
-      <div class="container" style="width: 12rem;">  
-        <mat-card style="background-color: rgb(255, 243, 177);"> 
-          <!--Colocar o titulo no card-->
-          <mat-card-title style="font-size: 15px;"> Lojas </mat-card-title>
+                <!--Recipiente para botões na parte inferior do cartão-->
+                <mat-card-actions>
+                  <button mat-raised-button color="primary" style="margin-bottom: 10px;"> Disponibilidade </button>
+                  <button mat-raised-button color="primary" style="margin-bottom: 10px;"> Navegar para </button>
+                </mat-card-actions>
 
-          <!--Imagem do cartão. Estende a imagem para a largura do contêiner-->
-          <img mat-card-image src="https://manipulae-prod.s3.us-west-2.amazonaws.com/farmacia/01564370000114/8xwI7klsVSaik8cYSwYa7m1ZlU17u9saSPMnWj4L.jpeg">	
-
-
-          <!--Recipiente para botões na parte inferior do cartão-->
-          <mat-card-actions> 
-            <button mat-raised-button color="primary" style="margin-bottom: 10px;"> Disponibilidade </button> 
-            <button mat-raised-button color="primary" style="margin-bottom: 10px;"> Navegar para </button>  
-          </mat-card-actions>
-  
-        </mat-card>
-      </div>
-
-      <div class="container" style="width: 12rem;">  
-        <mat-card style="background-color: rgb(255, 243, 177);"> 
-          <!--Colocar o titulo no card-->
-          <mat-card-title style="font-size: 15px;"> Lojas </mat-card-title>
-
-          <!--Imagem do cartão. Estende a imagem para a largura do contêiner-->
-          <img mat-card-image src="https://manipulae-prod.s3.us-west-2.amazonaws.com/farmacia/01564370000114/8xwI7klsVSaik8cYSwYa7m1ZlU17u9saSPMnWj4L.jpeg">	
-
-    
-          <!--Recipiente para botões na parte inferior do cartão-->
-          <mat-card-actions> 
-            <button mat-raised-button color="primary" style="margin-bottom: 10px;"> Disponibilidade </button> 
-            <button mat-raised-button color="primary" style="margin-bottom: 10px;"> Navegar para </button>  
-          </mat-card-actions>
-
-        </mat-card>
-      </div>
-
-      <div class="container" style="width: 12rem;">  
-        <mat-card style="background-color: rgb(255, 243, 177);"> 
-          <!--Colocar o titulo no card-->
-          <mat-card-title style="font-size: 15px;"> Lojas </mat-card-title>
-
-          <!--Imagem do cartão. Estende a imagem para a largura do contêiner-->
-          <img mat-card-image src="https://manipulae-prod.s3.us-west-2.amazonaws.com/farmacia/01564370000114/8xwI7klsVSaik8cYSwYa7m1ZlU17u9saSPMnWj4L.jpeg">	
-
-    
-          <!--Recipiente para botões na parte inferior do cartão-->
-          <mat-card-actions> 
-            <button mat-raised-button color="primary" style="margin-bottom: 10px;"> Disponibilidade </button> 
-            <button mat-raised-button color="primary" style="margin-bottom: 10px;"> Navegar para </button>  
-          </mat-card-actions>
-
-        </mat-card>
-      </div>
-
-      <div class="container" style="width: 12rem;">  
-        <mat-card style="background-color: rgb(255, 243, 177);"> 
-          <!--Colocar o titulo no card-->
-          <mat-card-title style="font-size: 15px;"> Lojas </mat-card-title>
-
-          <!--Imagem do cartão. Estende a imagem para a largura do contêiner-->
-          <img mat-card-image src="https://manipulae-prod.s3.us-west-2.amazonaws.com/farmacia/01564370000114/8xwI7klsVSaik8cYSwYa7m1ZlU17u9saSPMnWj4L.jpeg">	
-
-    
-          <!--Recipiente para botões na parte inferior do cartão-->
-          <mat-card-actions> 
-            <button mat-raised-button color="primary" style="margin-bottom: 10px;"> Disponibilidade </button> 
-            <button mat-raised-button color="primary" style="margin-bottom: 10px;"> Navegar para </button>  
-          </mat-card-actions>
-
-        </mat-card>
+              </mat-card>
+            </div>
+            <!-- <a matLine>{{loja.Id}} - {{ loja.Nome}}</a> -->
+          </mat-list-item>
+        </mat-nav-list>
       </div>
 
     </mat-card>
   </div>
 </div>
-
-
-<mat-nav-list>
-  <mat-list-item *ngFor="let anotacao of anotacao | async">
-    <a matLine>{{anotacao.id}} - {{ anotacao.obs}}</a>
-
-    <mat-icon (click)="deletar(anotacao.id)">delete</mat-icon>
-
-  </mat-list-item>
-</mat-nav-list>

@@ -1,3 +1,4 @@
+import { UnidadeSaude } from './unidadeSaude.interface';
 import { async } from '@angular/core/testing';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
@@ -11,8 +12,20 @@ export class GrupoService {
   constructor(private http: HttpClient) {
 
   }
-  getGrupo(): Observable<any> {
-    return this.http.get('https://localhost:5002/api/Grupos/1/100');
+  getUnidadesSaude(): Observable<any> {
+    return this.http.get('https://painel-covid-api.herokuapp.com/unidades-saude');
+  }
+
+  getUnidadeSaude(id: number): Observable<any> {
+    return this.http.get(`https://painel-covid-api.herokuapp.com/unidades-saude/${id}`);
+  }
+
+  postUnidadeSaude(unidadeSaude: UnidadeSaude): Observable<UnidadeSaude> {
+    return this.http.post<UnidadeSaude>(`https://painel-covid-api.herokuapp.com/unidades-saude`, unidadeSaude);
+  }
+
+  getUnidadesSaudeInfectados(latitude: number, longitude: number, metros: number): Observable<any> {
+    return this.http.get(`https://painel-covid-api.herokuapp.com/unidades-saude/teste-covid/latitude/${latitude}/longitude/${longitude}/raio/${metros}`);
   }
 
 

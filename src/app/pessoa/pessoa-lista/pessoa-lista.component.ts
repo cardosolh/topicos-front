@@ -1,3 +1,4 @@
+import { Usuario } from './../usuario.interface';
 import { Observable } from 'rxjs';
 import { PessoaService } from './../pessoa.service';
 import { Component, OnInit } from '@angular/core';
@@ -9,18 +10,14 @@ import { Pessoa } from '../pessoa.interface';
 })
 export class PessoaListaComponent implements OnInit {
 
-  pessoa: Observable<Pessoa>;
+  usuario: Observable<Usuario>;
   constructor(private pessoaService: PessoaService) { }
 
   ngOnInit(): void {
-    console.log(this.pessoa);
-    this.pessoa = this.pessoaService.getPessoa();
+    console.log(this.usuario);
+    this.usuario = this.pessoaService.getUsuarios();
   }
 
-  apagar(id: number) {
-    console.log(this.pessoa);
-    this.pessoaService.deletePessoa(id).subscribe();
 
-  }
 
 }

@@ -1,37 +1,44 @@
+<form #f="ngForm" (ngSubmit)="salvar(usuario)">
+  <mat-card>
+    <div class="example-container">
+      <mat-form-field appearance="outline">
+        <mat-label>Id</mat-label>
+        <input matInput [(ngModel)]="usuario.Id" name="id" id="Id" required [ngModelOptions]="{standalone: true}">
+      </mat-form-field>
 
 
-    <form #f="ngForm" (ngSubmit)="salvar(pessoa)">
-      <mat-card> 
-      <div class="example-container">
-        <mat-form-field  appearance="outline">
-          <mat-label>Id</mat-label>
-          <input matInput [(ngModel)]="pessoa.id" name="id" id="Id" required [ngModelOptions]="{standalone: true}">
-        </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Nome</mat-label>
+        <input matInput [(ngModel)]="usuario.Nome" nome="id" id="Nome" required [ngModelOptions]="{standalone: true}">
+      </mat-form-field>
+    </div>
 
 
-        <mat-form-field  appearance="outline">
-          <mat-label>Nome</mat-label>
-          <input matInput [(ngModel)]="pessoa.nome" nome="id" id="Nome" required [ngModelOptions]="{standalone: true}">
-        </mat-form-field>
-      </div>
-  
-
-    <div class="row" style="width: 64rem; text-align: center;" >  
-      <mat-card style="background-color: rgb(246, 251, 255);"> 
+    <div class="row" style="width: 64rem; text-align: center;">
+      <mat-card style="background-color: rgb(246, 251, 255);">
         <!--Colocar o titulo no card-->
         <mat-card-title style="font-size: 15px;"> Questionário - Teste Covid-19 </mat-card-title><br>
-          
-          <div>
-            
-            
-              <p><strong> Questão 1 -</strong> Frase de marcação para realização de teste?
-                <select name="combo" id="combo">
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                </select>
+
+        <div>
+
+
+          <p><strong> Questão 1 -</strong> Frase de marcação para realização de teste?
+            <select name="combo" id="combo">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+
+            <p><strong> Questão 1 -</strong> Frase de marcação para realização de teste?
+              <select name="combo" id="combo">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
 
               <p><strong> Questão 1 -</strong> Frase de marcação para realização de teste?
                 <select name="combo" id="combo">
@@ -42,49 +49,40 @@
                   <option value="5">5</option>
                 </select>
 
-              <p><strong> Questão 1 -</strong> Frase de marcação para realização de teste?
-                <select name="combo" id="combo">
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                </select>
+                <p><strong> Questão 1 -</strong> Frase de marcação para realização de teste?
+                  <select name="combo" id="combo">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
 
-              <p><strong> Questão 1 -</strong> Frase de marcação para realização de teste?
-                <select name="combo" id="combo">
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                </select>
+                  <p><strong> Questão 1 -</strong> Frase de marcação para realização de teste?
+                    <select name="combo" id="combo">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
 
-              <p><strong> Questão 1 -</strong> Frase de marcação para realização de teste?
-                <select name="combo" id="combo">
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                </select>
-
-              <!--<mat-form-field  appearance="outline">
+                    <!--<mat-form-field  appearance="outline">
                 <mat-label> Insira sua </mat-label>
                 <input matInput placeholder="Placeholder">
               </mat-form-field>
             -->
-            
-          </div>
 
-          <!--Recipiente para botões na parte inferior do cartão-->
-      <mat-card-actions> 
-        <button mat-raised-button color="primary" style="margin-bottom: 10px;"> Analisar Questionario </button>   
-      </mat-card-actions>
+        </div>
+
+        <!--Recipiente para botões na parte inferior do cartão-->
+        <mat-card-actions>
+          <button mat-raised-button color="primary" style="margin-bottom: 10px;"> Analisar Questionario </button>
+        </mat-card-actions>
 
       </mat-card>
     </div>
-  
+
 
 
 
@@ -93,5 +91,5 @@
       <button type="submit" mat-raised-button>Editar </button>
       <button type="submit" mat-raised-button>Excluir</button>
     </div>
-  </mat-card> 
-  </form>
+  </mat-card>
+</form>

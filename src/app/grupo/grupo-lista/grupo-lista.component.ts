@@ -1,3 +1,4 @@
+import { UnidadeSaude } from './../unidadeSaude.interface';
 import { Observable } from 'rxjs';
 import { GrupoService } from '../grupo.service';
 import { Component, OnInit } from '@angular/core';
@@ -9,12 +10,12 @@ import { Grupo } from '../grupo.interface';
 })
 export class GrupoListaComponent implements OnInit {
 
-  grupo: Observable<Grupo>;
+  unidadeSaude: Observable<UnidadeSaude>;
   constructor(private grupoService: GrupoService) { }
 
   ngOnInit(): void {
-    console.log(this.grupo);
-    this.grupo = this.grupoService.getGrupo();
+    console.log(this.unidadeSaude);
+    this.unidadeSaude = this.grupoService.getUnidadesSaude();
   }
 
 }
