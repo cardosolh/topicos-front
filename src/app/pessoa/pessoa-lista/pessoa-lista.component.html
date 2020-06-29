@@ -1,11 +1,22 @@
-<button mat-button routerLink="/pessoa/form"> Novo</button>
+<!--<button mat-button routerLink="/pessoa/form"> Novo</button>-->
 
 <div>
-  <mat-nav-list>
-    <mat-list-item *ngFor="let usuario of usuario | async">
-      <a matLine>{{usuario.Id}} - {{ usuario.Nome}}</a>
+  <!--<mat-nav-list>-->
+    <mat-card>
 
-    </mat-list-item>
-  </mat-nav-list>
+      <!--Colocar o titulo no card-->
+      <mat-card-title style="font-size: 15px;"> Listas de Usuários </mat-card-title><br>
+
+      <div class="row" *ngFor="let usuario of usuario | async">
+        <mat-card style="background-color: rgb(255, 243, 177); width: 20rem;"><a matLine>{{usuario.Id}} - {{ usuario.Nome}}</a></mat-card>
+      </div>
+
+      <!--Botão -->
+      <mat-card-actions>
+        <button mat-raised-button color="primary" style="margin-bottom: 10px;" routerLink="/pessoa/form"> Novo Usuário </button>
+      </mat-card-actions>
+
+  </mat-card>
+  <!--</mat-nav-list>-->
 
 </div>

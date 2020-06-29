@@ -1,37 +1,51 @@
-<form #f="ngForm" (ngSubmit)="salvar(usuario)">
+
+<mat-card class="row">
+  <div style="width: 82rem; text-align: center;">
+  <form #f="ngForm" (ngSubmit)="salvar(usuario)">
+    <mat-card class="row" style="text-align: center; background-color: rgb(255, 243, 177);">
+
+      <!--Colocar o titulo no card-->
+      <mat-card-title style="font-size: 15px;"> Cadastro de Novo Usuário </mat-card-title><br>
+
+
+      <div class="example-container">
+        <mat-form-field appearance="outline">
+          <mat-label>Id</mat-label>
+          <input matInput [(ngModel)]="usuario.Id" name="id" id="Id" required [ngModelOptions]="{standalone: true}">
+        </mat-form-field>
+
+
+        <mat-form-field appearance="outline">
+          <mat-label>Nome</mat-label>
+          <input matInput [(ngModel)]="usuario.Nome" nome="id" id="Nome" required [ngModelOptions]="{standalone: true}">
+        </mat-form-field>
+      </div>
+
+      <div>
+       <!--<button type="submit;" mat-raised-button>Salvar</button>-->
+        <mat-card-actions>
+          <button type="submit;" mat-raised-button color="primary" style="margin-bottom: 10px;"> Salvar </button>
+        </mat-card-actions>
+        <!--<button type="submit" mat-raised-button>Editar </button>
+        <button type="submit" mat-raised-button>Excluir</button>-->
+      </div>
+
+    </mat-card>
+
+    </form>
+  </div>
+  </mat-card>
+
   <mat-card>
-    <div class="example-container">
-      <mat-form-field appearance="outline">
-        <mat-label>Id</mat-label>
-        <input matInput [(ngModel)]="usuario.Id" name="id" id="Id" required [ngModelOptions]="{standalone: true}">
-      </mat-form-field>
 
+      <div class="row" style="width: 82rem; text-align: center;">
+        <mat-card style="background-color: rgb(255, 243, 177);">
+          <!--Colocar o titulo no card-->
+          <mat-card-title style="font-size: 15px;"> Questionário - Teste Covid-19 </mat-card-title><br>
 
-      <mat-form-field appearance="outline">
-        <mat-label>Nome</mat-label>
-        <input matInput [(ngModel)]="usuario.Nome" nome="id" id="Nome" required [ngModelOptions]="{standalone: true}">
-      </mat-form-field>
-    </div>
-
-
-    <div class="row" style="width: 64rem; text-align: center;">
-      <mat-card style="background-color: rgb(246, 251, 255);">
-        <!--Colocar o titulo no card-->
-        <mat-card-title style="font-size: 15px;"> Questionário - Teste Covid-19 </mat-card-title><br>
-
-        <div>
-
-
-          <p><strong> Questão 1 -</strong> Incidêncida de tosse seca nos útimos 14 dias:
-            <select name="combo" id="combo">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-            </select>
-
-            <p><strong> Questão 1 -</strong> Nível de cansaço nos útimos 14 dias:
+          <div>
+            
+            <p><strong> Questão 1 -</strong> Incidêncida de tosse seca nos útimos 14 dias:
               <select name="combo" id="combo">
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -40,7 +54,7 @@
                 <option value="5">5</option>
               </select>
 
-              <p><strong> Questão 1 -</strong> Dores no corpo nos útimos 14 dias:
+              <p><strong> Questão 2 -</strong> Nível de cansaço nos útimos 14 dias?
                 <select name="combo" id="combo">
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -49,7 +63,7 @@
                   <option value="5">5</option>
                 </select>
 
-                <p><strong> Questão 1 -</strong> Dor de cabeça nos útimos 14 dias:
+                <p><strong> Questão 3 -</strong> Dores no corpo nos útimos 14 dias?
                   <select name="combo" id="combo">
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -58,7 +72,7 @@
                     <option value="5">5</option>
                   </select>
 
-                  <p><strong> Questão 1 -</strong> Febre nos útimos 14 dias:
+                  <p><strong> Questão 4 -</strong> Dor de cabeça nos útimos 14 dias?
                     <select name="combo" id="combo">
                       <option value="1">1</option>
                       <option value="2">2</option>
@@ -67,29 +81,25 @@
                       <option value="5">5</option>
                     </select>
 
-                    <!--<mat-form-field  appearance="outline">
-                <mat-label> Insira sua </mat-label>
-                <input matInput placeholder="Placeholder">
-              </mat-form-field>
-            -->
+                    <p><strong> Questão 5 -</strong> Febre nos útimos 14 dias?
+                      <select name="combo" id="combo">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                      </select>
 
-        </div>
+          </div>
 
-        <!--Recipiente para botões na parte inferior do cartão-->
-        <mat-card-actions>
-          <button mat-raised-button color="primary" style="margin-bottom: 10px;"> Analisar Questionario </button>
-        </mat-card-actions>
+          <!--Recipiente para botões na parte inferior do cartão
+          <mat-card-actions>
+            <button mat-raised-button color="primary" style="margin-bottom: 10px;"> Analisar Questionario </button>
+          </mat-card-actions>-->
 
-      </mat-card>
-    </div>
+        </mat-card>
+      </div>
+    
+  
 
-
-
-
-    <div>
-      <button type="submit;" mat-raised-button>Salvar</button>
-      <button type="submit" mat-raised-button>Editar </button>
-      <button type="submit" mat-raised-button>Excluir</button>
-    </div>
-  </mat-card>
-</form>
+</mat-card>

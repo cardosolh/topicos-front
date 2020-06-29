@@ -25,12 +25,16 @@
 
             <!--Recipiente para botões na parte inferior do cartão-->
             <mat-card-actions>
-              <a>Possui Testes Covid: {{loja.TesteCovid?'Sim':'Não'}}</a>
+              <a> <strong> Testes Covid:</strong> <br> {{loja.TesteCovid?'Sim':'Não'}}</a>
               <br>
-              <a>Suprimentos:</a>
+              <br>
+              <a> <strong> Suprimentos: </strong></a>
               <div *ngFor="let suprimento of loja.Suprimentos" class="container">
                 <a>{{suprimento.Nome}} - {{suprimento.Quantidade}} {{suprimento.UnidadeMedida}}</a><br>
               </div>
+              
+              <br>
+              <br>
 
               <!-- <button mat-raised-button color="primary" style="margin-bottom: 10px;"> Disponibilidade </button> -->
               <a href={{loja.Direcoes}}> <button mat-raised-button color="primary" style="margin-bottom: 10px;"> Navegar para </button></a>
