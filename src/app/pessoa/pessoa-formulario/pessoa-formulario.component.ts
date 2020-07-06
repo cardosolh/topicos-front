@@ -34,7 +34,7 @@ export class PessoaFormularioComponent implements OnInit {
   deletar(id: number): void {
     this.service.deletePessoa(id).subscribe(
       data => {
-        this.router.navigate(['/pessoa']);
+        this.router.navigate(['pessoa']);
 
       },
       error => { }

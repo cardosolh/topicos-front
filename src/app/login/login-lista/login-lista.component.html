@@ -1,0 +1,13 @@
+<mat-nav-list>
+  <mat-list-item *ngFor="let login of login | async">
+    <a matLine>{{login.id}} - {{ login.user}}</a>
+
+    <mat-icon color="primary" (click)="deletar(login.id)">delete</mat-icon>
+
+  </mat-list-item>
+</mat-nav-list>
+<div class="fab">
+  <button mat-fab color="primary" routerLink="/login/form" aria-label="Insere um novo recurso.">
+    <mat-icon>add</mat-icon>
+  </button>
+</div>

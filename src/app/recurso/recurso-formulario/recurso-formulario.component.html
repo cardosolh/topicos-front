@@ -1,0 +1,15 @@
+<form #f="ngForm" (ngSubmit)="salvar(recurso)">
+  <div class="example-container">
+    <mat-form-field appearance="fill">
+      <mat-label>Id</mat-label>
+      <input matInput [(ngModel)]="recurso.id" type="number" name="id" id="Id" required [ngModelOptions]="{standalone: true}">
+
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Nome</mat-label>
+      <input matInput [(ngModel)]="recurso.descricao" nome="descricao" id="Descricao" required [ngModelOptions]="{standalone: true}">
+    </mat-form-field>
+  </div>
+  <button type="submit" mat-raised-button>Salvar</button>
+</form>

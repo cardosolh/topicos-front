@@ -20,13 +20,13 @@
     <br>
     <mat-form-field appearance="fill">
       <mat-label>Id Pessoa</mat-label>
-      <input matInput [(ngModel)]="anotacao.id_pessoa" name="number" id="IdPessoa" required [ngModelOptions]="{standalone: true}">
+      <input matInput [(ngModel)]="anotacao.id_pessoa" name="number" type="number" id="IdPessoa" required [ngModelOptions]="{standalone: true}">
     </mat-form-field>
 
     <br>
     <mat-form-field appearance="fill">
       <mat-label>Id Grupo</mat-label>
-      <input matInput [(ngModel)]="anotacao.id_grupo" name="number" id="IdGrupo" required [ngModelOptions]="{standalone: true}">
+      <input matInput [(ngModel)]="anotacao.id_grupo" name="number" type="number" id="IdGrupo" required [ngModelOptions]="{standalone: true}">
     </mat-form-field>
   </div>
   <button type="submit" mat-raised-button>Salvar</button>

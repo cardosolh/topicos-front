@@ -1,0 +1,33 @@
+<form #f="ngForm" (ngSubmit)="salvar(login)">
+  <div class="example-container">
+    <mat-form-field appearance="fill">
+      <mat-label>Id</mat-label>
+      <input matInput [(ngModel)]="login.id" name="id" type="number" id="Id" required [ngModelOptions]="{standalone: true}">
+
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>User</mat-label>
+      <input matInput [(ngModel)]="login.user" name="text" id="User" required [ngModelOptions]="{standalone: true}">
+    </mat-form-field>
+
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Password</mat-label>
+      <input matInput [(ngModel)]="login.password" name="text" id="Password" required [ngModelOptions]="{standalone: true}">
+    </mat-form-field>
+
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Id Pessoa</mat-label>
+      <input matInput [(ngModel)]="login.id_pessoa" type="number" name="number" id="IdPessoa" required [ngModelOptions]="{standalone: true}">
+    </mat-form-field>
+
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Id Perfil</mat-label>
+      <input matInput [(ngModel)]="login.id_perfil" type="number" name="number" id="IdPerfil" required [ngModelOptions]="{standalone: true}">
+    </mat-form-field>
+  </div>
+  <button type="submit" mat-raised-button>Salvar</button>
+</form>

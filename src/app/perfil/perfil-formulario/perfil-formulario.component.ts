@@ -25,7 +25,7 @@ export class PerfilFormularioComponent implements OnInit {
     console.log(perfil.nome);
     this.service.postPerfil(perfil).subscribe(
       data => {
-        this.router.navigate(['/perfil']);
+        this.router.navigate(['perfil']);
 
       },
       error => { }
