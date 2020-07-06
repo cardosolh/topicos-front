@@ -14,6 +14,10 @@ const routes: Routes = [
   {
     path: 'grupo',
     loadChildren: () => import('./grupo/grupo.module').then(g => g.GrupoModule)
+  },
+  {
+    path: 'perfil',
+    loadChildren: () => import('./perfil/perfil.module').then(g => g.PerfilModule)
   }
 ];
 

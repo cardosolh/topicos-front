@@ -1,10 +1,15 @@
-<button mat-button routerLink="/pessoa/form"> Novo</button>
+<!-- <button mat-button routerLink="/pessoa/form"> Novo</button> -->
 
 <mat-nav-list>
   <mat-list-item *ngFor="let pessoa of pessoa | async">
     <a matLine>{{pessoa.id}} - {{ pessoa.nome}}</a>
 
-    <mat-icon (click)="apagar(pessoa.id)">delete</mat-icon>
+    <mat-icon color="primary" (click)="apagar(pessoa.id)">delete</mat-icon>
 
   </mat-list-item>
 </mat-nav-list>
+<div class="fab">
+  <button mat-fab color="primary" routerLink="/pessoa/form" aria-label="Insere um novo recurso.">
+    <mat-icon>add</mat-icon>
+  </button>
+</div>

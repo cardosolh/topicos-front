@@ -1,10 +1,30 @@
 <mat-toolbar color="primary">
-  <mat-icon>menu</mat-icon>
+  <mat-icon (click)="drawer.toggle()" href="">menu</mat-icon>
   <span style="text-align: center;margin:auto;">Tópicos Especiais - Front</span>
 </mat-toolbar>
-<mat-sidenav-container>
+<!-- <mat-sidenav-container>
   <button mat-flat-button routerLink="/pessoa">Pessoas</button>
   <button mat-flat-button routerLink="/anotacao">Anotações</button>
   <button mat-flat-button routerLink="/grupo"> Grupos</button>
 </mat-sidenav-container>
-<router-outlet></router-outlet>
+<router-outlet></router-outlet> -->
+<mat-drawer-container color="primary">
+  <mat-drawer #drawer mode="push">
+    <mat-nav-list color="accent">
+
+      <a mat-list-item (click)="drawer.toggle()" [routerLink]="'/pessoa'"> Pessoas </a>
+      <a mat-list-item (click)="drawer.toggle()" [routerLink]="'/anotacao'"> Anotações </a>
+      <a mat-list-item (click)="drawer.toggle()" [routerLink]="'/grupo'"> Grupos </a>
+      <a mat-list-item (click)="drawer.toggle()" [routerLink]="'/perfil'"> Perfis </a>
+      <a mat-list-item (click)="drawer.toggle()" [routerLink]="'/login'"> Logins </a>
+      <a mat-list-item (click)="drawer.toggle()" [routerLink]="'/recurso'"> Recursos </a>
+
+    </mat-nav-list>
+  </mat-drawer>
+  <mat-drawer-content>
+    <div style="height: 100vh;">
+
+      <router-outlet></router-outlet>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>

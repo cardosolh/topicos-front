@@ -1,10 +1,13 @@
-<button mat-button routerLink="/anotacao/form"> Novo</button>
-
 <mat-nav-list>
   <mat-list-item *ngFor="let anotacao of anotacao | async">
     <a matLine>{{anotacao.id}} - {{ anotacao.obs}}</a>
 
-    <mat-icon (click)="deletar(anotacao.id)">delete</mat-icon>
+    <mat-icon color="primary" (click)="deletar(anotacao.id)">delete</mat-icon>
 
   </mat-list-item>
 </mat-nav-list>
+<div class="fab">
+  <button mat-fab color="primary" routerLink="/anotacao/form" aria-label="Insere um novo recurso.">
+    <mat-icon>add</mat-icon>
+  </button>
+</div>

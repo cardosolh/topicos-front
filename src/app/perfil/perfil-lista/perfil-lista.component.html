@@ -1,0 +1,15 @@
+<!-- <button mat-button routerLink="/perfil/form"> Novo</button> -->
+
+<mat-nav-list>
+  <mat-list-item *ngFor="let perfil of perfil | async">
+    <a matLine>{{perfil.id}} - {{ perfil.descricao}}</a>
+
+    <mat-icon color="primary" (click)="apagar(perfil.id)">delete</mat-icon>
+
+  </mat-list-item>
+</mat-nav-list>
+<div class="fab">
+  <button mat-fab color="primary" routerLink="/perfil/form" aria-label="Insere um novo recurso.">
+    <mat-icon>add</mat-icon>
+  </button>
+</div>
